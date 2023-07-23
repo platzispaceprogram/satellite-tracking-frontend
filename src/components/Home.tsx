@@ -7,7 +7,7 @@ const Home = () => {
             <div className='overlay'/>
             <video src={videoBg} autoPlay loop muted/>
             <div className='content'>
-            <h1>NAME TEAM</h1>
+            <h1>FRANCISCO - SEBASTIAN - ANGEL</h1>
             <p>PLATZI SPACE PROGRAM</p>
             </div>
         </div>
