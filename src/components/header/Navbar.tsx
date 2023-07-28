@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import SatelliteAltIcon from '@mui/icons-material/SatelliteAlt';
 
 const pages = ['Project', 'Map', 'Grounds', 'Contact'];
 const settings = ['Login', 'Account', 'Logout'];
@@ -39,7 +39,7 @@ function ResponsiveAppBar() {
     <AppBar position="fixed" style={{backgroundColor:'rgba(50, 73, 116, 0.2)'}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' } ,mr: 12 }} />
+          <SatelliteAltIcon sx={{ display: { xs: 'none', md: 'flex' } ,mr: 12 }} />
           <Typography
             variant="h6"
             noWrap
@@ -95,7 +95,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <SatelliteAltIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
