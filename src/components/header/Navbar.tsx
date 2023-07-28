@@ -36,8 +36,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed" >
-      <Container maxWidth="xl" style={{backgroundColor:'rgba(50, 76, 113, 0.4)'}} >
+    <AppBar position="fixed" style={{backgroundColor:'rgba(50, 73, 116, 0.2)'}}>
+      <Container maxWidth="xl" >
         <Toolbar disableGutters >
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' } ,mr: 12 }} />
           <Typography
@@ -45,9 +45,8 @@ function ResponsiveAppBar() {
             noWrap
             component="a"
             href="/"
-            
             sx={{
-              mr: 50,
+              mr: 70,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Prompt',
               fontWeight: 700,
@@ -115,7 +114,7 @@ function ResponsiveAppBar() {
           >
         
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, alignItems:'center', justifyContent:'space-around' ,display: { xs: 'none', md: 'flex' }}}>
             {pages.map((page) => (
               <Button
                 key={page}
