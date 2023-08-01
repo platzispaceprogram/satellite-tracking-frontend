@@ -6,11 +6,11 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Typography from '@mui/joy/Typography';
 
-export default function FAQCard() {
+export default function Project() {
   return (
-
-    <>
+    <div style={{paddingTop:10, paddingBottom:10, backgroundColor:'yellow'}}>
       <div style={{
+
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
@@ -26,7 +26,6 @@ export default function FAQCard() {
         textAlign: 'center',
         maxWidth: '100%',
         width: 750,
-        mt: 5,
         // to make the demo resizable
         resize: 'horizontal',
         overflow: 'auto',
@@ -128,7 +127,6 @@ export default function FAQCard() {
         resize: 'horizontal',
         overflow: 'auto',
         backgroundColor: 'black',
-        mt: 2.5
       }}
     >
         <CardContent sx={{
@@ -166,7 +164,7 @@ export default function FAQCard() {
         </CardContent>
       </Card>
       </div>
-    </>
+    </div>
     
   );
 }

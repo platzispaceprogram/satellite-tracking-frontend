@@ -1,15 +1,8 @@
-* {
+ * {
 	margin: 0;
 	padding: 0;
-	font-family: Prompt, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-	font-size: 16px;
-}
-
-body,
-html {
-	height: 100%;
-	overflow: hidden;
-	background-color: black;
+	 font-family: Prompt, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: 16px; 
 }
 
 .home {
@@ -44,7 +37,7 @@ video {
 
 .content h1,
 .content p {
-	max-width: 100%; /* Evita que el contenido exceda el ancho del contenedor */
+	max-width: 100%;
 }
 
 .overlay {

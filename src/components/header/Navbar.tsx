@@ -19,7 +19,7 @@ const pages = [
   { id: '', name: 'Home' },
   { id: 'project', name: 'Project' },
   { id: 'map', name: 'Map' },
-  { id: 'ground', name: 'Grounds' },
+  { id: 'grounds', name: 'Grounds' },
   { id: 'contact', name: 'Contact' },
 ];
 const settings = ['Login', 'Account', 'Logout'];
@@ -128,7 +128,6 @@ function ResponsiveAppBar() {
 
             {pages.map((page) => (
               <Button
-                key={page.id}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 1, color: 'white', display: 'block' }}
               >
@@ -162,7 +161,7 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem onClick={handleCloseUserMenu}>
                   <Typography textAlign="center" >{setting}</Typography>
                 </MenuItem>
               ))}
