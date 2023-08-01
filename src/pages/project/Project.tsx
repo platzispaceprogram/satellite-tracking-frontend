@@ -41,7 +41,7 @@
 //   );
 // }
 
-export default function TeamExample() {
+export default function Project() {
   return (
     // <CssVarsProvider disableTransitionOnChange>
     //   <CssBaseline />
