@@ -8,12 +8,20 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import SatelliteAltIcon from '@mui/icons-material/SatelliteAlt';
+import { Link } from 'react-router-dom'
+import { Button } from '@mui/material';
 
-const pages = ['Project', 'Map', 'Grounds', 'Contact'];
+const pages = [
+  { id: '', name: 'Home' },
+  { id: 'project', name: 'Project' },
+  { id: 'map', name: 'Map' },
+  { id: 'ground', name: 'Grounds' },
+  { id: 'contact', name: 'Contact' },
+];
 const settings = ['Login', 'Account', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -36,10 +44,10 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed" style={{backgroundColor:'rgba(50, 73, 116, 0.2)'}}>
+    <AppBar position="fixed" style={{ backgroundColor: 'rgba(50, 73, 116, 0.2)' }}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' } ,mr: 12 }} />
+          <SatelliteAltIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 12 }} />
           <Typography
             variant="h6"
             noWrap
@@ -55,10 +63,10 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-          FOLLOWSAT-1
+            FOLLOWSAT-1
           </Typography>
 
-          <Box sx={{ flexGrow: 1, elevation:8, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, elevation: 8, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -70,7 +78,7 @@ function ResponsiveAppBar() {
               <MenuIcon />
             </IconButton>
             <Menu
-              
+
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -90,12 +98,14 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`/${page.id}`}>{page.name}</Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <SatelliteAltIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -112,16 +122,19 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-        
+
           </Typography>
-          <Box sx={{ flexGrow: 1, alignItems:'center', justifyContent:'space-around' ,display: { xs: 'none', md: 'flex' }}}>
+          <Box sx={{ flexGrow: 1, alignItems: 'center', justifyContent: 'space-around', display: { xs: 'none', md: 'flex' } }}>
+
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.id}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 1,color: 'white', display: 'block' }}
+                sx={{ my: 1, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link to={`/${page.id}`} style={{ textDecoration: 'none', color: 'white' }}>
+                  {page.name}
+                </Link>
               </Button>
             ))}
           </Box>
@@ -129,8 +142,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar  src="/static/images/avatar/2.jpg" />
-                
+                <Avatar src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -159,6 +171,7 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
+
   );
 }
 export default ResponsiveAppBar;
