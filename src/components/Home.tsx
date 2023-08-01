@@ -1,13 +1,14 @@
-import videoBg from '../assets/videoBg.mp4'
+import videoBgd from '../assets/videoBgd.mp4'
 
 const Home = () => {
     return (
         <div className='home'>
             <div className='overlay'/>
-            <video src={videoBg} autoPlay loop muted/>
+            <video src={videoBgd} autoPlay loop muted/>
             <div className='content'>
-            <h1>FRANCISCO - SEBASTIAN - ANGEL</h1>
-            <p>PLATZI SPACE PROGRAM</p>
+                <h1>FOLLOWSAT 1</h1>
+                <h2>App Rastreo Satelital</h2>
+                <p>Platzi SPace Program</p>
             </div>
         </div>
     )
