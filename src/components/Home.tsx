@@ -1,8 +1,11 @@
 import videoBgd from '../assets/videoBgd.mp4'
+import ResponsiveAppBar from './header/Navbar'
 
 const Home = () => {
     return (
+        
         <div className='home'>
+            <ResponsiveAppBar/>
             <div className='overlay'/>
             <video src={videoBgd} autoPlay loop muted/>
             <div className='content'>
