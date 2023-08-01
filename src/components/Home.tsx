@@ -1,5 +1,4 @@
 import videoBgd from '../assets/videoBgd.mp4'
-import ResponsiveAppBar from './header/Navbar'
 
 const Home = () => {
     return (

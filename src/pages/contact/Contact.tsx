@@ -1,12 +1,22 @@
-import ResponsiveAppBar from '../../components/header/Navbar'
-import BasicFormControl from '../../components/form/form'
 import { Typography } from '@mui/material'
 
 
 const Contact = () => {
   return (
-    <div>
-    <Typography>Contact</Typography>
+    <div style={{ paddingTop: 10, paddingBottom: 10, backgroundColor: 'yellow' }}>
+      <div style={{
+
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "green",
+        minHeight: '100vh'
+      }}>
+
+        <Typography>Contact</Typography>
+      </div>
+
     </div>
   )
 }
